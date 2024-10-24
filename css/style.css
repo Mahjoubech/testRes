@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* ----------------------------Global Styles------------------------------ */
+
+:root {
+    --primary-color: #3C65F5; 
+    --secondary-color: #05264E; 
+    --box-background-color-1: #E6ECFF;
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;        
+}
+
+/* ---------------------------- Header Section ------------------------------ */
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 80px;
+}
+.nav-menu ul{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    list-style: none;
+}
+.nav-menu ul li{
+    margin-right: 30px;  
+}
+.nav-menu ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+.btn-2 {
+   padding: 10px 40px;
+   border-radius: 10px;
+   border: none;
+   background-color: var(--primary-color);
+   
+}
+.btn-2 a{
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.btn-1 {
+    background-color: transparent;
+    border: none;
+    margin-right: 20px;
+}
+.btn-1 a{
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    transition: all 0.1s ease;
+}
+.btn-2:hover{
+    background-color: transparent;
+    border: 1px solid var(--primary-color) !important;
+}
+.btn-2 a:hover{
+    color: var(--primary-color) !important;
+}
+.btn-1 a:hover{
+    color: var(--primary-color);
+}
+
+ul li a.active{
+    border-bottom: 3px solid var(--primary-color);
+    transform: scale(1.1);
+}
+ul li a.active, ul li a:hover{
+    color: var(--primary-color);
+}
+
+ul li a:hover{
+    color: var(--primary-color);
+    border-bottom: 3px solid var(--primary-color);
+    transform: scale(1.1);
+ }
+
+/* ---------------------------- Hero Section ------------------------------ */
+.container{
+    display: flex;
+    padding: 30px 80px;
+    margin: 0;
+    align-items: center;
+} 
+.left-hero{
+  display: flex; 
+  flex-direction: column;
+  margin: 0;
+  
+}
+.left-hero h1{
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--secondary-color);  
+}
+.left-hero span{
+    color: var(--primary-color);
+}
+.hero h1 span {
+    position: relative;
+    font-weight: 700;
+}
+.hero h1 span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 60%; 
+    height: 0.5em; 
+    background-color: #E6ECFF; 
+    z-index: -1; 
+}
+.left-hero p{
+    width: 70%;
+    margin: 0 ;
+}
+.search-filter{
+    display: flex;
+}
+.search-filter div{
+    display: flex;
+    align-items: center;
+}
+.search-filter{
+    background: white;
+    width: 70%;
+    margin-top: 30px;
+    padding: 5px 15px;
+    border-radius: 10px;
+    border: solid 1px var(--box-background-color-1) ;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.industry i{
+    color: #1C2D42;
+    font-size: 18px;
+    margin-right: 10px;
+} 
+.Location i{
+    color: #1C2D42;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.Keyword i{
+    color: #1C2D42;
+    font-size: 18px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+.search-filter h3{
+   font-size: 10px;
+}
+.btn-filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.btn-filter{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    padding: 7px 15px;
+    
+    border: none;
+}
+.btn-filter a{
+    text-decoration: none;
+    background-color: transparent;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.btn-filter i{
+    color: white;
+    margin-right: 5px;
+}
+.popular-search{
+    display: flex;
+    align-items: center;
+    color: #747474;
+}
+.popular-search h3{
+    font-weight: 600;
+    font-size: 16px;
+}
+.popular-search h5{
+    color: #747474;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+/* ---------------------------- Categories Section ------------------------------ */
+
+.categories{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    padding: 40px 80px;
+    margin: 0;
+    align-items: center;
+}
+.cate-box{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    background: red;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: white;
+    border: solid 1px #EEEEEE;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+.cate-box:hover{
+    border: solid 1px var(--primary-color);
+    transform: scale(1.05);
+}
+.cate-title h2{
+    margin: 0;
+    margin-top: 8px;
+    font-size: 18px;
+}
+.cate-title{
+    margin-left: 25px;
+}
+.cate-title p{
+    margin-top: 5px; 
+}
+
+/* ---------------------------- cta Section ------------------------------ */
+
+.cta{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 40px 300px;
+    padding: 40px 40px;
+    border-radius: 10px;
+    background: white;
+    border: solid 1px #EEEEEE;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: 1s;
+}
+.cta:hover{
+    border: solid 1px var(--primary-color);
+    transform: scale(1.08);
+}
+.cta-title h3{
+    margin: 0;
+}
+.cta-title h2{
+    margin: 0;
+    color: var(--primary-color);
+    font-size: 40px;
+}
+.cta-btn{
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition: 2s;
+}
+.cta-btn:hover{
+   background-color: var(--secondary-color);
+}
+.cta-btn a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+.cta-btn i {
+    color: white;
+    font-size: 20px;
+    padding-right: 10px;
+}
+.c-title{
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* ---------------------------- All Jobs Section ------------------------------ */
+
+.jobs-title{
+    text-align: center;
+    margin-top: 80px;
+    color: var(--secondary-color);
+}
+.jobs-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,1fr);
+    margin:  40px 90px;
+}
+.job-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px;
+    background-color: transparent;
+    border: solid 1px var(--primary-color);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: 1s;
+}
+.job-card:hover{
+   transform: scale(1.02);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.job-card h2{
+    color: var(--primary-color);
+}
+.jobs-title h2{
+    font-size: 30px;
+}
+.job-cate {
+    display: flex;
+}
+.cate1{
+    margin-right: 10px;
+    color: #4F5665;
+    font-size: 12px;
+    background: #E7EBF1;
+    padding: 10px;
+    border-radius: 5px;
+}
+.job-btn{
+    width: 35%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: var(--primary-color);
+    transition: 1s;
+}
+.job-btn:hover{
+    background: var(--secondary-color);
+}
+.job-btn a{
+    text-decoration: none;
+    color: white;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.btn-55{
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.btn-5{
+    padding: 15px 30px;
+    border-radius: 10px;
+    border: solid 1px var(--primary-color);
+    background: transparent;
+    transition: 1s;
+}
+.btn-5 a{
+    text-decoration: none;
+    font-size: 16px;
+    font-family: "Plus Jakarta Sans", sans-serif ;
+}
+.btn-5:hover{
+    transform: scale(1.08);
+}
+
+/* ---------------------------- Features Section ------------------------------ */
+.features-container{
+    display: flex;
+    margin: 40px 70px;
+    padding: 40px 40px;
+}
+.feature-right h2{
+    font-size: 34px;
+    font-weight: 600;
+    color: var(--secondary-color);  
+}
+.feature-right span{
+    color: var(--primary-color);
+}
+.feature-right h1 span {
+    position: relative;
+    font-weight: 700;
+}
+.icon-box {
+    background: var(--primary-color);
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: inline;
+    transition: 1s;
+}
+.icon-box:hover{
+    transform: scale(1.08);
+    background-color: var(--secondary-color);
+}
+.f-box-1{
+    display: flex;
+    flex-direction: row;
+}
+.f-box-1 h3{
+    margin-left: 20px;
+}
+.features-box {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+}
+.feature-left img{
+    height: 580px;
+    width: 580px;
+}
+
+/* ---------------------------- Jobs Locations Section ------------------------------ */
+
+/* General Styles */
+.locations {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  .location-title {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .location-title h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  .location-title p {
+    color: #666;
+    font-size: 20px;
+  }
+  
+  /* Grid layout */
+  .loca-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(2,1fr);
+    gap: 20px;
+  }
+  
+  .location-box {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    transition: transform 1s;
+  }
+  #casablanca{
+    grid-column: span 2;
+  }
+  #madrid{
+    grid-column: span 2;
+  }
+ 
+  .location-box:hover {
+    transform: translateY(-10px);
+  }
+  
+  .location-box img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    height: 120px;
+  }
+  
+  .location-box h3 {
+    font-size: 16px;
+    margin: 15px 0;
+    text-align: left;
+  }
+  
+  .cnt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .cnt p {
+    color: #333;
+    font-size: 16px;
+  }
+
+/* ---------------------------- Newsletter Section ------------------------------ */
+
+.newsletter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 80px 140px ;
+    background-color: var(--primary-color);
+    padding: 20px 40px;
+    border-radius: 20px;
+    text-align: center;
+}
+.center-box h2{
+    font-size: 32px;
+    color: white;
+}
+.input{
+    background-color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+}
+.input input{
+    border: none;
+    outline: none;
+    font-size: 16px;
+    flex: 1;
+    padding: 10px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: #6c757d;
+}   
+.subscribe-btn{
+    background-color: #3C65F5;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.subscribe-btn:hover{
+    background-color: #2a4cc7;
+}
+.subscribe-btn i{
+    font-size: 20px;
+    margin-right:10px ;
+}
+
+/* ---------------------------- Footer Section ------------------------------ */
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 30px;
+    color: #333;
+    padding: 30px 80px;
+    align-items: start;
+}
+.socail-media i{
+    font-size: 25px;
+    color: var(--secondary-color);
+    padding: 20px 0px;
+}
+.list-2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.list-2 ul, .list-2 ul li a{
+    list-style: none;
+    text-decoration: none;
+    
+    
+}
